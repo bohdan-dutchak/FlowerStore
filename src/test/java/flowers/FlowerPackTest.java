@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FlowerPackTest {
-    private FlowerPack flowerpack = new FlowerPack(new Flower(FlowerType.Rose, Color.RED, 2, 100), 10);
+    public Flower flower = new Flower(FlowerType.Rose, Color.RED, 2, 100);
+    private FlowerPack flowerpack = new FlowerPack(flower, 10);
 
     @Test
     void getPrice() {
@@ -14,6 +15,6 @@ class FlowerPackTest {
 
     @Test
     void getFlower() {
-        assertEquals(FlowerType.Rose, flowerpack.getFlower());
+        assertEquals(flower, flowerpack.getFlower());
     }
 }
