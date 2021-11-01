@@ -1,3 +1,5 @@
+package store;
+
 import flowers.*;
 
 import java.sql.SQLOutput;

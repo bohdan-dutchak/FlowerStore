@@ -1,5 +1,8 @@
 import java.util.*;
+
+import decorators.PaperDecorator;
 import flowers.*;
+import store.Store;
 
 public class main {
     public static void main(String[] args){
@@ -10,6 +13,13 @@ public class main {
         myStore.search(Color.BLACK);
         myStore.search(FlowerType.Chamomile);
 
+        Flower f = new Flower(FlowerType.Rose, Color.RED, 5, 20);
+        FlowerPack fp = new FlowerPack(f, 10);
+        FlowerBucket fb = new FlowerBucket(fp);
+        Item item = fb;
+        item = new PaperDecorator(item);
+        System.out.println(item.getPrice());
+        System.out.println(item.getDescription());
     }
 
     public static double randomDouble(double l, double r){

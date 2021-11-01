@@ -1,6 +1,6 @@
 package flowers;
 
-public class Flower {
+public class Flower extends Item{
     private double sepalLength;
     private double price;
     private Color color;
@@ -16,12 +16,17 @@ public class Flower {
     public double getSepalLength() { return sepalLength; }
 
     public Color getColor() { return color; }
-
+    @Override
     public double getPrice(){
         return price;
     }
 
     public FlowerType getFlowerType() { return flowertype; }
+
+    @Override
+    public String getDescription(){
+        return "Flower";
+    }
 
     public String toString() { return "Type: "+this.flowertype+"; Color: "+this.color+"; Sepa Lenth: "+this.sepalLength+"; Price : "+price; }
 }
