@@ -1,13 +1,14 @@
 import java.util.*;
-
 import decorators.PaperDecorator;
 import flowers.*;
+import order.User;
 import store.Store;
+import order.*;
 
 public class main {
     public static void main(String[] args){
         List<Flower> arr = generateAssort(20);
-
+/*
         Store myStore = new Store(arr);
         myStore.showAssortment();
         myStore.search(Color.BLACK);
@@ -20,6 +21,10 @@ public class main {
         item = new PaperDecorator(item);
         System.out.println(item.getPrice());
         System.out.println(item.getDescription());
+ */
+        Order order = QuickOrder.generate(5);
+        order.notifyUsers("pidor");
+
     }
 
     public static double randomDouble(double l, double r){
