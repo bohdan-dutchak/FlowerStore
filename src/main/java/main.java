@@ -8,7 +8,7 @@ import order.*;
 public class main {
     public static void main(String[] args){
         List<Flower> arr = generateAssort(20);
-/*
+
         Store myStore = new Store(arr);
         myStore.showAssortment();
         myStore.search(Color.BLACK);
@@ -21,9 +21,9 @@ public class main {
         item = new PaperDecorator(item);
         System.out.println(item.getPrice());
         System.out.println(item.getDescription());
- */
+
         Order order = QuickOrder.generate(5);
-        order.notifyUsers("pidor");
+        order.notifyUsers("midterm in Thursday!");
 
     }
 
